@@ -1,0 +1,401 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"); */
+
+@font-face {
+  font-family: SorceSnaceRegular;
+  font-display: swap;
+  src: url("./font/SourceSansPro-Regular.ttf");
+}
+@font-face {
+  font-family: SorceSnaceBold;
+  font-display: swap;
+  src: url("./font/SourceSansPro-Bold.ttf");
+}
+.header {
+  display: grid;
+  grid-template-columns: 0.5fr 20fr 0.5fr;
+}
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.body {
+  display: grid;
+  grid-template-columns: 0.5fr 20fr 0.5fr;
+}
+.Booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m_img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.l_img {
+  width: 500px;
+}
+.r_img {
+  width: 160px;
+  float: right;
+  margin-top: 37px;
+}
+.over_text {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 80px;
+}
+.T1 {
+  color: white;
+  font-size: 50px;
+  margin: 15px 0;
+  font-family: SorceSnaceBold;
+}
+.T2 {
+  color: white;
+  font-size: 24px;
+  margin: 15px 0;
+  font-family: SorceSnaceRegular;
+}
+.T3 {
+  font-size: 50px;
+  text-align: center;
+  font-family: SorceSnaceBold;
+}
+.T4 {
+  font-size: 90px;
+  color: #870305;
+  text-align: center;
+  font-family: SorceSnaceBold;
+}
+.T5 {
+  font-size: 19px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: SorceSnaceRegular;
+}
+.T6 {
+  font-size: 40px;
+  text-align: center;
+  color: #870305;
+  font-weight: bolder;
+  margin: 30px 0;
+  font-family: SorceSnaceBold;
+}
+.t_center {
+  align-self: center;
+}
+.owner {
+  width: 100%;
+  margin: 20px 0;
+}
+.B1 {
+  border: none;
+  color: #870305;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: white;
+  outline: none;
+  font-family: SorceSnaceBold;
+}
+.B2 {
+  border: none;
+  color: white;
+  padding: 10px 53px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #870305;
+  outline: none;
+  font-family: SorceSnaceBold;
+}
+.B3 {
+  border: none;
+  color: white;
+  padding: 10px 53px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #870305;
+  outline: none;
+  margin: 30px 0;
+  font-family: SorceSnaceBold;
+}
+.B4 {
+  border: none;
+  color: white;
+  padding: 10px 53px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #870305;
+  outline: none;
+  margin-top: 10px;
+  font-family: SorceSnaceBold;  
+}
+.B4:disabled{
+    background-color: #888  ;
+}
+#label1 {
+  display: block;
+  font-family: SorceSnaceBold;
+}
+#label2 {
+  display: block;
+  font-family: SorceSnaceRegular;
+}
+.B_cont {
+  align-items: center;
+}
+.T_img {
+  width: 400px;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
+}
+.gmap {
+  width: 100%;
+  height: 500px;
+}
+.footer {
+  padding: 20px 40px;
+  text-align: center;
+  background-color: #dddedf;
+  font-family: SorceSnaceRegular;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 20px 16px;
+  background-color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  display: block;
+}
+
+.greeting {
+  display: none;
+  text-align: center;
+  font-size: 40px;
+  font-family: SorceSnaceRegular;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: white;
+  color: white;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: #dddedf;
+  border: none;
+  border-radius: 5px;
+  font-family: SorceSnaceRegular;
+}
+label {
+  font-size: 18px;
+}
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #dddedf;
+  font-weight: bold;
+  color: grey;
+  border: none;
+}
+option {
+  background-color: #fefefe;
+  color: #000;
+  border: none;
+  font-family: SorceSnaceRegular;
+}
+.container {
+  position: relative;
+}
+.loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 839px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .Booking {
+    grid-template-columns: 1fr;
+  }
+  .T_img {
+    width: 100%;
+    position: relative;
+  }
+  .l_img {
+    width: 170px;
+  }
+  .r_img {
+    width: 70px;
+    margin-top: 10px;
+  }
+  .T1 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  .T2 {
+    font-size: 11px;
+    margin: 10px 0;
+  }
+  .T3 {
+    font-size: 30px;
+  }
+  .T4 {
+    font-size: 46px;
+  }
+  .T6 {
+    font-size: 28px;
+  }
+  .B1 {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .B3 {
+    font-size: 20px;
+  }
+  .over_text {
+    left: 5%;
+    bottom: 15%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .footer {
+    font-size: 8px;
+  }
+}

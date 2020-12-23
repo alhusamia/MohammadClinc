@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="App">
+      <div class="header">
+        <div></div>
+        <div class="h_main">
+          <img src="./assets/Photos/Logo.png" alt="" class="l_img" />
+          <img src="./assets/Photos/eonlogo.jpg" alt="" class="r_img" />
+        </div>
+        <div></div>
+      </div>
+      <div class="body">
+        <div></div>
+        <div>
+            <div class="container">
+          <img
+            src="./assets//Photos/lady-smiling-1080x675.jpg"
+            alt=""
+            class="m_img"
+          />
+          <div class="over_text">
+            <div class="T1">Ready for a new stunning smile?</div>
+            <button class="B1" onclick=Book() >Book a consultation!</button>
+            <div class="T2">
+              *Offer is valid for a consukltations booked on Dec 16th & Dec 26th
+            </div>
+          </div></div>
+          <div class="Booking">
+            <div class="t_center">
+              <div class="T3">Don't miss the offer</div>
+              <div class="T4">& go wireless</div>
+            </div>
+            <div class="B_cont">
+                <div class="center">
+              <img src="./assets//Photos/Untitled-1.jpg" alt="" class="T_img" /></div>
+                <div class="center">
+              <button class="B2" onclick=Book()>Book now!</button></div>
+              <div class="T5">*Monthly installments are available.</div>
+            </div>
+          </div>
+          <div class="center">
+            <img
+              src="./assets//Photos/Screen Shot 2020-11-24 at 9.39.26 PM.png"
+              alt=""
+              class="owner"
+            />
+          </div>
+          <div>
+            <div class="T6">our clicnk location</div>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  class="gmap"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=%D9%85%D8%B1%D9%83%D8%B2%20%D9%85%D8%AD%D9%85%D8%AF%20%D9%84%D8%AA%D9%82%D9%88%D9%8A%D9%85%20%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe>
+                <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
+              </div>
+            </div>
+            <div class="center">
+            <button class="B3" onclick=Book()>Book a consultation!</button></div>
+          </div>
+        </div>
+      <div></div>
+      </div>
+      <div class="footer">Copyright &#169 2019 Mohammad Orthodontic Center - All Rights Reserved</div>
+    </div>
+    <div id="Modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <div id="label1">Submit your information</div>  
+            <span class="close">&times;</span>
+            <div id="label2">And we will contact you shortly</div>
+          </div>
+          <div class="modal-body" id="body">
+            <form id="myForm">              
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value=""
+                placeholder="Name"
+                required
+              /><br />
+              <select name="contact" id="contact" required>
+                  <option hidden> Contact Method</option>
+                <option value="phone" >Phone</option>
+                <option value="WhatsApp"  >WhatsApp</option>
+                <option value="Email" >Email</option>                
+              </select>              
+              <br />
+              <input
+                type="text"
+                id="contact_select"
+                name="contact input"
+                placeholder="Contact input"
+                value=""
+                required
+              />
+              <div class="center">
+              <button type="submit" id="submit"  class="B4">
+                Submit
+            </button>
+            <div class="loader" id="loader"></div>
+            </div>
+            </form>
+          </div>
+          <div class="greeting" id="greet">  Thank You </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+      <script src="assets/Main.js"></script>
+  </body>
+</html>
